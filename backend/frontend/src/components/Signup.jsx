@@ -21,7 +21,7 @@ let from=location.state?.from?.pathname || '/';
       Password:data.Password
     }
     //console.log(data);
-    axios.post('http://localhost:4001/user/signup',userInfo).then((res)=>{
+    axios.post('/user/signup',userInfo).then((res)=>{
       console.log(res.data);
       if(res.data){
       toast.success('Signup Successfully')

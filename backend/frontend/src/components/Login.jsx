@@ -14,7 +14,7 @@ function Login ()  {
     Email:data.Email,
     Password:data.Password
    };
-   await axios.post('http://localhost:4001/user/login',userinfo).then((res)=>{
+   await axios.post('/user/login',userinfo).then((res)=>{
 console.log(res.data);
 if(res.data){
   toast.success('Login Successfully');
