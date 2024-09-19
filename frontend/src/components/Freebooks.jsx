@@ -48,7 +48,9 @@ function Freebooks({filteredbooks,setfilteredBooks, search, books, setBooks}) {
       useEffect(()=>{
         const getserachedBook=async()=>{
           try {
-            let res=await axios.get(`/book`)
+            let res=await axios.get(`http://localhost:4001/book`)
+            console.log(res.data);
+              
             setBooks((res.data).filter((data)=>data.category==='free'))
            setfilteredBooks(res.data)
            console.log(filteredbooks.map((book)=>book.name));
