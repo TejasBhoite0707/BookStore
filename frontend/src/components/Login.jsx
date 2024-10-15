@@ -19,8 +19,7 @@ console.log(res.data);
 if(res.data){
   toast.success('Login Successfully');
   document.getElementById('my_modal_3').close();
-  setTimeout(()=>{
-    
+  setTimeout(()=>{ 
     window.location.reload();
     localStorage.setItem("users",JSON.stringify(res.data.user))
   },1000)
